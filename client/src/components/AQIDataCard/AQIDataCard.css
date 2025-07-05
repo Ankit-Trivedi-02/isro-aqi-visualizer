@@ -1,0 +1,53 @@
+/* AQI Data Card Styles */
+.aqi-card {
+  background-color: rgba(255, 255, 255, 0.1);
+  /* Default glass effect */
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  backdrop-filter: blur(10px);
+  padding: 20px;
+  width: 300px;
+  margin: 20px auto;
+  transition: background-color 0.3s ease;
+  color: rgb(0, 0, 0);
+  position: relative;
+  z-index: 1;
+}
+
+.aqi-card-content {
+  text-align: center;
+}
+
+.aqi-card h2 {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.aqi-details,
+.aqi-summary {
+  margin-top: 10px;
+}
+
+.aqi-item {
+  display: flex;
+  justify-content: space-between;
+  margin: 8px 0;
+  font-size: 16px;
+}
+
+.aqi-item span:first-child {
+  font-weight: bold;
+}
+
+.aqi-item span:last-child {
+  font-size: 16px;
+}
+
+.aqi-card.purple {
+  background-color: purple;
+  /* Purple background for "Very Poor" status */
+}
+
+.aqi-card.purple .aqi-item span {
+  color: rgb(0, 0, 0);
+}

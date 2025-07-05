@@ -1,0 +1,81 @@
+/* Ensure that CityHeader container has relative positioning */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+body {
+  font-family: 'Poppins', sans-serif;
+}
+.header-box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    position: relative;
+    z-index: 10;
+}
+
+.city-header {
+    border-radius: 10px;
+    padding: 20px;
+    margin: 20px;
+    min-width: 80%;
+    width: 100%;
+    max-width: 400px;
+    text-align: center;
+    color: rgb(0, 0, 0);
+    backdrop-filter: blur(10px);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    /* Added to ensure z-index works */
+}
+.city-header .city-info h1{
+     font-family: 'Poppins';
+}
+/* Style for the search input */
+.city-search {
+    position: relative;
+     min-width: 40%;
+    /* Ensure the dropdown is positioned relative to this container */
+}
+
+/* The search input field */
+.city-search-input {
+    padding: 10px;
+    font-size: 16px;
+   
+    width: 100%;
+    max-width: 300px;
+    margin-top: 10px;
+    border: none;
+    border-radius: 5px;
+    outline: none;
+}
+
+/* Dropdown suggestions for city search */
+.city-suggestions {
+    list-style: none;
+    padding: 0;
+    margin: 10px 0;
+    max-height: 200px;
+    overflow-y: auto;
+    position: absolute;
+    top: 45px;
+    /* Position below the search input */
+    left: 0;
+    right: 0;
+    color: aliceblue;
+    background-color: rgba(0, 0, 0, 0.7);
+    border-radius: 5px;
+    box-shadow: 0 4px 6px rgba(11, 10, 10, 0.5);
+    z-index: 999;
+    /* This ensures the dropdown appears above other elements */
+}
+
+.city-suggestions li {
+    padding: 8px;
+    cursor: pointer;
+}
+
+.city-suggestions li:hover {
+    background-color: rgba(255, 255, 255, 0.3);
+}

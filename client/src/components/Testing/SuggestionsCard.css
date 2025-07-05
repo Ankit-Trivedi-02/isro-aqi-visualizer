@@ -1,0 +1,12 @@
+.suggestions-card {
+  background-color: #2c2c3e;
+  color: white;
+  padding: 1rem;
+  border-radius: 10px;
+}
+
+.suggestions-card ul {
+  padding-left: 1.2rem;
+  list-style: disc;
+  margin-top: 0.5rem;
+}

@@ -1,0 +1,20 @@
+{
+    "city": "Delhi",
+    " coordinates": {
+        "lat": 28.6139,
+        "lng": 77.209
+    },
+    "aqi": 312,
+    "pm25": 180,
+    "pm10": 210,
+    "status": "Very Poor",
+    "temperature": "18",
+    "todayTemperature": "18",
+    "YesterdayTemperature": "28",
+    "tomorrowTemperatue": "30",
+    "humudity": "39",
+    "reelFeel": "67",
+    "UV": "00",
+    "pressure": "9",
+    "chanceOfRain": "98"
+}

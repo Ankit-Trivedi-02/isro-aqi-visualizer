@@ -1,0 +1,25 @@
+{
+    "city": "Kanpur",
+    "temperature": {
+        "temperature":"23",
+        "todayTemperature": "23",
+        "YesterdayTemperature": "25",
+        "tomorrowTemperatue": "24"
+    },
+    "weatherMetrics": {
+        "humidity": "26",
+        "reelFeel": "78",
+        "uv": "5",
+        "pressure": "720",
+        "chanceOfRain": "50"
+    },
+    "aqi": {
+        "pm2_5": "8",
+        "pm10": "30",
+        "so2": "20",
+        "no2": "20",
+        "co": "33",
+        "o2": "74",
+        "aqi": "121"
+    }
+}

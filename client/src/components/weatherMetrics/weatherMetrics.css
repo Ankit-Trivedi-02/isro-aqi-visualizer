@@ -1,0 +1,72 @@
+/* Basic Styling for the Extra Data Card */
+.extra-data-card {
+  background-color: rgba(255, 255, 255, 0.1); /* Default glass effect */
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  backdrop-filter: blur(10px);
+  padding: 20px;
+  width: 300px;
+  margin: 20px auto;
+  color: rgb(0, 0, 0);
+  position: relative;
+  z-index: 1;
+  transition: background-color 0.3s ease;
+}
+
+.extra-data-card-content {
+  text-align: center;
+}
+
+.extra-data-card h2 {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.extra-data-details {
+  margin-top: 10px;
+}
+
+.extra-data-item {
+  display: flex;
+  justify-content: space-between;
+  margin: 8px 0;
+  font-size: 16px;
+}
+
+.extra-data-item span:first-child {
+  font-weight: bold;
+}
+
+.extra-data-item span:last-child {
+  font-size: 16px;
+}
+
+/* Rain effect styling */
+.extra-data-card.rain {
+  background-color: rgba(0, 0, 255, 0.2); /* Light blue tint */
+}
+
+.extra-data-card.rain .extra-data-item {
+  color: rgb(0, 0, 0);
+}
+
+.rain-effect {
+  position: absolute;
+  top: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 50px;
+  animation: rain 1s infinite;
+}
+
+@keyframes rain {
+  0% {
+    top: -10px;
+  }
+  50% {
+    top: 10px;
+  }
+  100% {
+    top: -10px;
+  }
+}

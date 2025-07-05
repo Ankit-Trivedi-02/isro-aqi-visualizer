@@ -1,0 +1,52 @@
+/* Card Styles */
+.card {
+  background: rgba(255, 255, 255, 0.1);
+  /* Default glass effect */
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  backdrop-filter: blur(10px);
+  padding: 20px;
+  width: 300px;
+  margin: 20px auto;
+  transition: background-color 0.3s ease;
+  position: relative;
+  z-index: 1;
+}
+
+.card-content {
+  text-align: center;
+  color: rgb(0, 0, 0);
+}
+
+.card h2 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.temp {
+  font-size: 40px;
+  font-weight: bold;
+  margin: 10px 0;
+}
+
+.temperature-details {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.temp-item {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  margin: 5px 0;
+}
+
+.temp-item span:first-child {
+  font-weight: bold;
+  margin-right: 10px;
+}
+
+.temp-item span:last-child {
+  font-size: 18px;
+}

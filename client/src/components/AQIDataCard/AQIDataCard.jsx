@@ -8,6 +8,7 @@ const AQIDataCard = () => {
   if (!data) {
     return <div>Loading...</div>;
   }
+  console.log(data);
 
   // Destructure the required data
 const {

@@ -1,0 +1,40 @@
+.weather-charts-echarts-container {
+  padding: 2rem;
+  margin-top: 20px;
+  background: linear-gradient(135deg, #0e1421 0%, #15274c 100%);
+  border-radius: 20px;
+  box-shadow: 0 0 30px rgba(20, 30, 60, 0.8);
+  color: white;
+  font-family: "Lucida Sans", "Lucida Sans Regular", sans-serif;
+}
+.main-title{
+  text-align: center;
+  margin-bottom: 25px;
+}
+.charts-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: space-between;
+}
+
+/* Chart Card Style */
+.chart-card {
+  background: #1b2a49;
+  border-radius: 12px;
+  padding: 1.2rem;
+  flex: 1 1 calc(50% - 1rem); /* Two per row with gap */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+  transition: transform 0.3s ease;
+}
+
+.chart-card:hover {
+  transform: translateY(-4px);
+}
+
+/* Responsive behavior for small screens */
+@media (max-width: 768px) {
+  .chart-card {
+    flex: 1 1 100%;
+  }
+}

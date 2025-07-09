@@ -8,14 +8,14 @@ export const WeatherContext = createContext();
 export const WeatherProvider = ({ children }) => {
   const [data, setData] = useState(null);
   const [aqiGraphData, setAqiGraphData] = useState(null);
-  const [city, setCity] = useState("New York");
-  const [lat, setLat] = useState("40.7128");
-  const [lang, setLang] = useState("-74.0060");
+  const [city, setCity] = useState("Kanpur");
+  const [lat, setLat] = useState("26.45");
+  const [lang, setLang] = useState("80.33");
 
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const data = await getLiveAQI(city, lat, lang);
+        const data = await getLiveAQI({ city, lat, lang });
         console.log(data)  // Fetch both weather and AQI data
         if (data) {
           setData(data);  // Store the data

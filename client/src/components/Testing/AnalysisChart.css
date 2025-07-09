@@ -1,0 +1,79 @@
+.analysis-container {
+  background-color: #0e1421;
+  padding: 2rem;
+  border-radius: 12px;
+  color: white;
+  margin: 2rem 0;
+}
+
+.analysis-title {
+  text-align: center;
+  margin-bottom: 2rem;
+  color: #b2cfff;
+}
+
+.input-boxes {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-bottom: 2rem;
+  justify-content: space-between;
+}
+
+.input-boxes div {
+  flex: 1 1 22%;
+  display: flex;
+  flex-direction: column;
+}
+
+.input-boxes label {
+  margin-bottom: 0.5rem;
+  font-weight: bold;
+}
+
+.input-boxes input {
+  padding: 0.5rem;
+  border: none;
+  border-radius: 8px;
+}
+
+.charts-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: space-between;
+}
+
+.chart-box {
+  background: #1b2a49;
+  padding: 1.5rem;
+  border-radius: 12px;
+  flex: 1 1 48%;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+}
+
+.chart-box h3 {
+  margin-bottom: 1rem;
+  color: #88e1f2;
+}
+
+.improvement-summary {
+  margin-top: 2rem;
+  font-size: 1.2rem;
+  text-align: center;
+  background-color: #15274c;
+  padding: 1rem;
+  border-radius: 8px;
+  color: #d1ffd6;
+}
+
+/* Responsive */
+@media screen and (max-width: 768px) {
+  .input-boxes div {
+    flex: 1 1 100%;
+  }
+
+  .chart-box {
+    flex: 1 1 100%;
+  }
+}

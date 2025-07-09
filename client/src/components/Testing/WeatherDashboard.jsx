@@ -1,29 +1,39 @@
 import React from "react";
-import TopBar from "./TopBar";
+import SearchBar from "./SearchBar";
+import Navbar from "./Navbar";
+import TopBar from "./SearchBar";
 import CurrentWeatherCard from "./CurrentWeatherCard";
 import HighlightsCard from "./HighlightsCard";
 import WeeklyForecast from "./WeeklyForecast";
 import SuggestionsCard from "./SuggestionsCard";
-import OtherCitiesCard from "./OtherCitiesCard";
+import AQIReport from "./AQIReport";
+import MapView from "./MapView";
+import WeatherCharts from "./WeatherCharts";
+import AnalysisChart from "./AnalysisChart";
+import Footer from "./Footer";
 import "./WeatherDashboard.css";
 
 const WeatherDashboard = () => {
   return (
     <div className="dashboard-container">
-      <TopBar />
-
+      
+      < SearchBar />
       <div className="main-content">
         <div className="left-panel">
           <CurrentWeatherCard />
           <WeeklyForecast />
+          <MapView />
         </div>
-
         <div className="right-panel">
           <HighlightsCard />
           <SuggestionsCard />
-          <OtherCitiesCard />
+          <AQIReport />
         </div>
       </div>
+      <WeatherCharts />
+      <AnalysisChart />
+      <Footer />
+
     </div>
   );
 };

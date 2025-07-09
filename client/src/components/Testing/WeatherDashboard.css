@@ -3,8 +3,10 @@
   padding: 1rem;
   background: #121212;
   min-height: 100vh;
+  box-sizing: border-box;
 }
 
+/* Layout: flex with wrapping for responsiveness */
 .main-content {
   display: flex;
   flex-wrap: wrap;
@@ -12,16 +14,24 @@
   margin-top: 1.5rem;
 }
 
-.left-panel {
-  flex: 1;
+/* Left and Right Panels */
+.left-panel,
+.right-panel {
+  flex: 1 1 45%;
   display: flex;
   flex-direction: column;
   gap: 1.5rem;
+  min-width: 300px; /* Prevents items from shrinking too small */
 }
 
-.right-panel {
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  gap: 1.5rem;
+/* Responsive: Stack panels on smaller screens */
+@media (max-width: 768px) {
+  .left-panel,
+  .right-panel {
+    flex: 1 1 100%;
+  }
+
+  .main-content {
+    flex-direction: column;
+  }
 }

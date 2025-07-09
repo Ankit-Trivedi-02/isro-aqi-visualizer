@@ -1,5 +1,6 @@
 import "./App.css";
-import Navbar from "./components/navbar/Navbar";
+import Navbar from "./components/Testing/Navbar";
+// import Navbar from "./components/navbar/Navbar";
 import CityHeader from "./components/CityHeader/CityHeader";
 import TemperatureCard from "./components/TemperatureCard/Temperaturecard";
 import WeatherMetrics from "./components/weatherMetrics/weatherMetrics";
@@ -19,19 +20,10 @@ function App() {
 
   return (
     <>
-   
-      <Navbar />
       <WeatherProvider>
-        <CityHeader setCity={setSelectedCity} />
-        <div className="DataCards">
-        <TemperatureCard />
-          <WeatherMetrics />
-          <AQIDataCard />
-        </div>
-        <AqiGraphReport/>
+        < Navbar />
+        <WeatherDashboard />
       </WeatherProvider>
-       <WeatherDashboard/>
-      <Footer />
     </>
   );
 }

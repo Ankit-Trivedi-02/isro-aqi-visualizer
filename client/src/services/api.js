@@ -1,28 +1,35 @@
 import axios from "axios";
+import { WeatherContext } from "../context/WeatherContext";
 
-const BASE_URL = "http://localhost:5000/api/aqi"; // Your backend URL
+const BASE_URL = "http://localhost:5000/api/aqi";
 
 /**
- * Fetch live AQI and weather data for a city with lat/lng.
- * @param {string} city - city name (required)
- * @param {string|number} lat - latitude (required)
- * @param {string|number} lang - longitude (required)
- * @returns {object|null} - response data or null if error
+ * Fetch live AQI and weather data for a specific location.
+ * @param {Object} params - Parameters for the API request.
+ * @param {string} params.city - City name (required).
+ * @param {string|number} params.lat - Latitude (required).
+ * @param {string|number} params.lang - Longitude (required).
+ * @returns {Promise<Object|null>} - Weather/AQI data or null on error.
  */
-export const getLiveAQI = async (city, lat, lang) => {
+export const getLiveAQI = async ({ city, lat, lang }) => {
+  console.log(city,lat,lang);
   if (!city || !lat || !lang) {
-    console.error("City, latitude, and longitude are required parameters.");
+    console.error("Missing required parameters: city, lat, and lang must be provided.");
     return null;
   }
 
+  const url = `${BASE_URL}/${encodeURIComponent(city)}`;
+  const queryParams = {
+    params: { lat, lang },
+  };
+
   try {
-    const url = `${BASE_URL}/${encodeURIComponent(city)}?lat=${lat}&lang=${lang}`;
-    const res = await axios.get(url);
-    console.log("Request URL:", url);
-    console.log("Response data:", res.data);
-    return res.data;
+    const response = await axios.get(url, queryParams);
+    console.debug("Request URL:", response.config.url);
+    console.debug("Response Data:", response.data);
+    return response.data;
   } catch (error) {
-    console.error("Failed to fetch AQI:", error);
+    console.error("Error fetching AQI and weather data:", error.message || error);
     return null;
   }
 };
@@ -36,8 +43,8 @@ export const getTemperatureData = async (city, lat, lang) => {
   try {
     const url = `${BASE_URL}/temperatureData/${encodeURIComponent(city)}?lat=${lat}&lang=${lang}`;
     const res = await axios.get(url);
-    console.log("Request URL:", url);
-    console.log("Response data:", res.data);
+   // console.log("Request URL:", url);
+   // console.log("Response data:", res.data);
     return res.data;
   } catch (error) {
     console.error("Failed to fetch AQI:", error);
@@ -54,8 +61,8 @@ export const getAqiGraphData = async (city, lat, lang) => {
   try {
     const url = `${BASE_URL}/predict/${encodeURIComponent(city)}?lat=${lat}&lang=${lang}`;
     const res = await axios.get(url);
-    console.log("Request URL:", url);
-    console.log("Response data:", res.data);
+    //console.log("Request URL:", url);
+    //console.log("Response data:", res.data);
     return res.data;
   } catch (error) {
     console.error("Failed to fetch AQI:", error);

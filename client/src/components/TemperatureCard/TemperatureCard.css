@@ -23,11 +23,11 @@
   margin-bottom: 10px;
 }
 
-.temp {
+/* .temp {
   font-size: 40px;
   font-weight: bold;
   margin: 10px 0;
-}
+} */
 
 .temperature-details {
   display: flex;

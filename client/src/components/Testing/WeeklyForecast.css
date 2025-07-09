@@ -1,28 +1,130 @@
 .weekly-forecast {
-  background-color: #2c2c3e;
+  background-color: #0E1421;
   padding: 1rem;
   border-radius: 10px;
   color: white;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
 }
 
+/* Hourly section */
 .hourly {
   display: flex;
-  justify-content: space-around;
-  margin-bottom: 1rem;
+  flex-wrap: wrap;
+  justify-content: center;
+  background-image: radial-gradient(circle at center, #15274C 0%, #15274C 10%, #111A2C 40%, #111A2C 100%);
+  border-radius: 20px;
+  padding: 8px 12px;
+  gap: 8px;
 }
 
 .hour-slot {
+  flex: 0 1 auto;
+  display: flex;
+  justify-content: center;
+}
+
+.hourly-container {
+  background-color: #273043;
   display: flex;
   flex-direction: column;
   align-items: center;
+  padding: 6px 10px;
+  border-radius: 12px;
+  border: 0.5px solid rgba(255, 255, 255, 0.3);
+  min-width: 60px;
+  text-align: center;
 }
 
+.hourly-container .time {
+  margin-bottom: 10px;
+  font-size: 0.85rem;
+}
+
+.hourly-container img {
+  margin-bottom: 10px;
+  width: 30px;
+}
+
+/* Tomorrow Forecast */
 .tomorrow {
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+  background-image: radial-gradient(circle at center, #15274C 0%, #15274C 10%, #111A2C 40%, #111A2C 100%);
+  border-radius: 20px;
   font-weight: bold;
-  margin-bottom: 0.5rem;
+}
+
+.tomorrow img {
+  height: 50px;
+  margin-left: 20px;
+}
+
+/* Sun Data Box */
+.sun-data-box {
+  background-image: radial-gradient(circle at center, #15274C 0%, #15274C 10%, #111A2C 40%, #111A2C 100%);
+  border-radius: 20px;
+  padding: 20px;
+}
+
+/* Layout only on larger screens */
+@media (min-width: 768px) {
+  .weekly-forecast {
+    flex-direction: row;
+    align-items: flex-start;
+    flex-wrap: wrap;
+  }
+
+  .hourly {
+    flex: 1 1 100%;
+  }
+
+  .tomorrow {
+    flex: 1 1 60%;
+    order: 2;
+  }
+
+  .sun-data-box {
+    flex: 1 1 35%;
+    order: 1;
+    align-self: stretch;
+  }
+}
+
+/* Responsive adjustments */
+@media (max-width: 767px) {
+  .tomorrow {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .tomorrow img {
+    margin-left: 0;
+    margin-top: 10px;
+  }
+
+  .sun-data-box,
+  .tomorrow {
+    width: 100%;
+  }
 }
 
 .sun-data {
-  font-size: 0.9rem;
-  color: #c5c5c5;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  text-align: center;
+}
+
+@media (min-width: 768px) {
+  .sun-data {
+    justify-content: space-around;
+    align-items: center;
+    height: 100%;
+  }
 }
